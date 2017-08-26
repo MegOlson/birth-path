@@ -7,7 +7,19 @@ function Number(dob) {
     for (var i = 0; i < strings.length; i++) {
       strings[i] = parseInt(strings[i]);
     }
-    console.log(strings);
+    for (var i = 0, sum = 0; i <= strings.length; sum += strings[i++]){
+      var firstTotal = sum;
+    }
+    if (firstTotal > 9) {
+      var secondTotal = firstTotal.toString().split("");
+      for (var i = 0; i < secondTotal.length; i++) {
+        secondTotal[i] = parseInt(secondTotal[i]);
+      }
+      var finalTotal = secondTotal[0] + secondTotal[1];
+      return finalTotal;
+    } else {
+      return firstTotal;
+    }
   }
 }
 
