@@ -3,9 +3,11 @@
 function Number(dob) {
   this.dob = dob;
   Number.prototype.calculateNumber = function() {
-    var numberArray = [];
-    numberArray = dob.split("");
-    console.log(numberArray);
+    var strings = dob.split("");
+    for (var i = 0; i < strings.length; i++) {
+      strings[i] = parseInt(strings[i]);
+    }
+    console.log(strings);
   }
 }
 
